@@ -7,27 +7,27 @@ function App() {
     {
       name: "전통주",
       content: "요즘 전통주가 맛있더라구요",
-      img: "https://javascript-tau.vercel.app/images/traditional.jpg",
+      image: "https://javascript-tau.vercel.app/images/traditional.jpg",
     },
     {
       name: "맥주",
       content: "가끔 간단하게 마셔요",
-      img: "https://javascript-tau.vercel.app/images/beer.jpg",
+      image: "https://javascript-tau.vercel.app/images/beer.jpg",
     },
     {
       name: "칵테일",
       content: "칵테일 좋아요~ 친구들과 특별한 날 마셔요",
-      img: "https://javascript-tau.vercel.app/images/cocktail.jpeg",
+      image: "https://javascript-tau.vercel.app/images/cocktail.jpeg",
     },
     {
       name: "와인",
       content: "달달한 와인을 좋아해요",
-      img: "https://javascript-tau.vercel.app/images/wine.jpg",
+      image: "https://javascript-tau.vercel.app/images/wine.jpg",
     },
     {
       name: "하이볼",
       content: "얼그레이 하이볼이 요새 인기가 많던데 저도 좋아해요ㅋㅋㅋ",
-      img: "https://javascript-tau.vercel.app/images/highball.png",
+      image: "https://javascript-tau.vercel.app/images/highball.png",
     }
   ];
 
@@ -45,17 +45,17 @@ function App() {
   return (
     <>
       <header>
-        <span className='title'>고량주</span>
+        <span className="title">고량주</span>
       </header>
 
       <main>
-        <div className='sidebar'>
+        <div className="sidebar">
           <button
-            className="openModalBtn"
-            onClick={() => { setOpenModal(true) }}>모달창 열기</button>
+            className="add-button"
+            onClick={() => { setOpenModal(true) }}>추가</button>
           {data.map((item) => <span key={item.name}>{item.name}</span>)}
         </div>
-        <section className='container'>
+        <section className="container">
           {data.map((item) => (
             <div className="card" key={item.name}>
               <img src={item.image} alt={item.name} />
@@ -67,7 +67,7 @@ function App() {
      <Modal
       addItem={addItem}
       handleModalOpen={handleModalOpen}
-      openModal={openModal}
+      modalOpen={openModal}
      />
     </>
   );
